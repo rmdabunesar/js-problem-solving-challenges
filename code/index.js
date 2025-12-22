@@ -315,3 +315,29 @@ const merged = [...num1, ...num2].sort((a, b) => a - b);
 
 console.log(merged);
 */
+
+
+
+
+
+// 13. Remove Duplicates from Sorted Array
+function removeDuplicates(nums) {
+    nums.sort((a, b) => a - b);
+	console.log(nums);
+    if (nums.length === 0) return 0;
+
+    let k = 0;
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[k]) {
+            k++;
+            nums[k] = nums[i];
+        }
+    }
+    return k + 1;
+}
+
+let nums = [1, 2, 1];
+let length = removeDuplicates(nums);
+
+console.log(length);
+console.log(nums.slice(0, length));
