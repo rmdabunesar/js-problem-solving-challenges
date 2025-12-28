@@ -381,6 +381,16 @@ function firstOccurrence(s, target) {
     return s.indexOf(target);
 }
 
-let result = firstOccurrence("hello", "e");
-console.log(result);
+console.log(firstOccurrence("hello", "e"));
 */
+
+
+
+
+
+// 16. Length of Last Word
+function lengthOfLastWord(s) {
+	return s.trim().split(" ").pop().length;
+}
+
+console.log(lengthOfLastWord("Hello World"));
