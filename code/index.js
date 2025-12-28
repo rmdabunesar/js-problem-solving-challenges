@@ -348,6 +348,7 @@ console.log(nums.slice(0, length));
 
 
 // 14. Remove Element
+/*
 function removeElement(nums, val) {
 	let k = 0;
 	
@@ -368,3 +369,4 @@ let result = removeElement(nums, val);
 
 console.log(result);
 console.log(nums.slice(0, result));
+*/
