@@ -370,3 +370,17 @@ let result = removeElement(nums, val);
 console.log(result);
 console.log(nums.slice(0, result));
 */
+
+
+
+
+
+// 15. Find the Index of First Occurrence
+/*
+function firstOccurrence(s, target) {
+    return s.indexOf(target);
+}
+
+let result = firstOccurrence("hello", "e");
+console.log(result);
+*/
