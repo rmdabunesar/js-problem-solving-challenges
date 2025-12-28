@@ -321,9 +321,9 @@ console.log(merged);
 
 
 // 13. Remove Duplicates from Sorted Array
+/*
 function removeDuplicates(nums) {
     nums.sort((a, b) => a - b);
-	console.log(nums);
     if (nums.length === 0) return 0;
 
     let k = 0;
@@ -341,3 +341,30 @@ let length = removeDuplicates(nums);
 
 console.log(length);
 console.log(nums.slice(0, length));
+*/
+
+
+
+
+
+// 14. Remove Element
+function removeElement(nums, val) {
+	let k = 0;
+	
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] !== val) {
+		nums[k] = nums[i];
+		k++;
+		}
+	}
+	
+	return k;
+}
+
+let nums = [2, 3, 3, 1];
+let val = 3;
+
+let result = removeElement(nums, val);
+
+console.log(result);
+console.log(nums.slice(0, result));
