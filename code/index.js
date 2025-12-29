@@ -402,6 +402,15 @@ console.log(lengthOfLastWord("Hello World"));
 
 
 // 17. Climbing Stairs
+/*
+Ways to reach steps:
+1 → 1
+2 → 2
+3 → 3 (1+2)
+4 → 5 (2+3)
+5 → 8 (3+5)
+*/
+/*
 function climbStairs(n) {
 	if(n <= 2) return n;
 	
@@ -418,3 +427,24 @@ function climbStairs(n) {
 }
 
 console.log(climbStairs(5));
+*/
+
+
+
+
+
+// 18. Maximum Subarray
+function maxSubArray(nums) {
+	let currentSum = nums[0];
+	let maxSum = nums[0];
+	
+	for (let i = 1; i < nums.length; i++) {
+		currentSum = Math.max(nums[i], currentSum + nums[i]);
+		maxSum = Math.max(maxSum, currentSum);
+	}
+	
+	return maxSum;
+}
+
+const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+console.log(maxSubArray(arr));
