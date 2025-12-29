@@ -434,6 +434,7 @@ console.log(climbStairs(5));
 
 
 // 18. Maximum Subarray
+/*
 function maxSubArray(nums) {
 	let currentSum = nums[0];
 	let maxSum = nums[0];
@@ -448,3 +449,24 @@ function maxSubArray(nums) {
 
 const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 console.log(maxSubArray(arr));
+*/
+
+
+
+
+
+// 19. Plus One
+function plusOne(digits) {
+	for (let i = digits.length - 1; i >= 0; i--) {
+		if (digits[i] < 9) {
+			digits[i]++;
+			return digits;
+		} 
+		digits[i] = 0;
+	}
+	digits.unshift(1);
+	return digits;
+}
+
+console.log(plusOne([1, 2, 3]));
+console.log(plusOne([9, 9, 9]));
