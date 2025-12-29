@@ -456,6 +456,7 @@ console.log(maxSubArray(arr));
 
 
 // 19. Plus One
+/*
 function plusOne(digits) {
 	for (let i = digits.length - 1; i >= 0; i--) {
 		if (digits[i] < 9) {
@@ -470,3 +471,21 @@ function plusOne(digits) {
 
 console.log(plusOne([1, 2, 3]));
 console.log(plusOne([9, 9, 9]));
+*/
+
+
+
+
+
+// 20. Search Insert Position
+function searchInsert(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] >= target) {
+      return i;
+    }
+  }
+  return nums.length;
+}
+
+// Example usage:
+console.log(searchInsert([1, 3, 5, 6], 5));
