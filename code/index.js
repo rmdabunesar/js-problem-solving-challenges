@@ -443,6 +443,7 @@ console.log(longestCommonPrefix(input));
 */
 
 //22.  Valid Anagram
+/*
 function isAnagram(s, t) {
   if (s.length !== t.length) {
     const count = {};
@@ -461,3 +462,19 @@ function isAnagram(s, t) {
 }
 
 console.log(isAnagram("anagram", "nagaram"));
+*/
+
+// 23. Implement strStr()
+function strStr(haystack, needle) {
+  if (needle === "") return 0;
+
+  for (let i = 0; i <= haystack.length - needle.length; i++) {
+    if (haystack.substring(i, i + needle.length) === needle) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+console.log(strStr("hello", "ll"));
