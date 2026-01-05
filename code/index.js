@@ -422,6 +422,7 @@ console.log(searchInsert([1, 3, 5, 6], 5));
 */
 
 // 21. Longest Common Prefix
+/*
 function longestCommonPrefix(strs) {
   if (!strs.length) return "";
 
@@ -438,4 +439,25 @@ function longestCommonPrefix(strs) {
 }
 
 const input = ["flower", "flow", "flight"];
-console.log(longestCommonPrefix(input)); // "fl"
+console.log(longestCommonPrefix(input));
+*/
+
+//22.  Valid Anagram
+function isAnagram(s, t) {
+  if (s.length !== t.length) {
+    const count = {};
+
+    for (let char of s) {
+      count[char] = (count[char] || 0) + 1;
+    }
+
+    for (let char of t) {
+      if (!count[char]) return false;
+      count[char]--;
+    }
+  }
+
+  return true;
+}
+
+console.log(isAnagram("anagram", "nagaram"));
