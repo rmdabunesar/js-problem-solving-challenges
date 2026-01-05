@@ -478,6 +478,7 @@ console.log(plusOne([9, 9, 9]));
 
 
 // 20. Search Insert Position
+/*
 function searchInsert(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] >= target) {
@@ -489,3 +490,10 @@ function searchInsert(nums, target) {
 
 // Example usage:
 console.log(searchInsert([1, 3, 5, 6], 5));
+*/
+
+
+
+
+
+// 21. Longest Common Prefix
