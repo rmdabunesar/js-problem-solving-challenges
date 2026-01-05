@@ -1,4 +1,3 @@
-
 // 1. FizzBuzz
 /*
 for (let i = 1; i <= 100; i++) {
@@ -13,9 +12,6 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 */
-
-
-
 
 // 2. Two Sum
 /*
@@ -36,9 +32,6 @@ const result = twoSum(nums, target);
 console.log(result);
 */
 
-
-
-
 // 3. Reverse Integer
 /*
 function reverseInteger(x) {
@@ -54,9 +47,6 @@ function reverseInteger(x) {
 console.log(reverseInteger(-123));
 */
 
-
-
-
 // 4. Palindrome Number
 /*
 function isPalindrome(x) {
@@ -69,9 +59,6 @@ function isPalindrome(x) {
 
 console.log(isPalindrome(121));
 */
-
-
-
 
 // 5. Roman to Integer
 /*
@@ -113,9 +100,6 @@ function romanToInt(s) {
 
 console.log(romanToInt('MCMXCIV'));
 */
-
-
-
 
 // 6. Integer to Roman
 /*
@@ -165,9 +149,6 @@ function intToRoman(num) {
 console.log(intToRoman(58));
 */
 
-
-
-
 // 7. Count and Say
 /*
 Start with "1"
@@ -210,10 +191,6 @@ function countAndSay(n) {
 console.log(countAndSay(4));
 */
 
-
-
-
-
 // 8. Power of Two
 /*
     16 in binary is 10000
@@ -228,10 +205,6 @@ function isPowerOfTwo(n) {
 
 console.log(isPowerOfTwo(16));
 */
-
-
-
-
 
 // 9. Factorial Trailing Zeroes
 /*
@@ -254,10 +227,6 @@ function trailingZeroes(n) {
 console.log(trailingZeroes(125));
 */
 
-
-
-
-
 // 10. Add Digits (Digital Root)
 /*
 3 + 8 = 11
@@ -271,10 +240,6 @@ function addDigits(num) {
 
 console.log(addDigits(38));
 */
-
-
-
-
 
 // 11. Valid Parentheses
 /*
@@ -302,10 +267,6 @@ function isValid(s) {
 console.log(isValid("()[]{}"));
 */
 
-
-
-
-
 // 12. Merge Two Sorted Arrays
 /*
 const num1 = [1, 3, 5]
@@ -315,10 +276,6 @@ const merged = [...num1, ...num2].sort((a, b) => a - b);
 
 console.log(merged);
 */
-
-
-
-
 
 // 13. Remove Duplicates from Sorted Array
 /*
@@ -342,10 +299,6 @@ let length = removeDuplicates(nums);
 console.log(length);
 console.log(nums.slice(0, length));
 */
-
-
-
-
 
 // 14. Remove Element
 /*
@@ -371,10 +324,6 @@ console.log(result);
 console.log(nums.slice(0, result));
 */
 
-
-
-
-
 // 15. Find the Index of First Occurrence
 /*
 function firstOccurrence(s, target) {
@@ -384,10 +333,6 @@ function firstOccurrence(s, target) {
 console.log(firstOccurrence("hello", "e"));
 */
 
-
-
-
-
 // 16. Length of Last Word
 /*
 function lengthOfLastWord(s) {
@@ -396,10 +341,6 @@ function lengthOfLastWord(s) {
 
 console.log(lengthOfLastWord("Hello World"));
 */
-
-
-
-
 
 // 17. Climbing Stairs
 /*
@@ -429,10 +370,6 @@ function climbStairs(n) {
 console.log(climbStairs(5));
 */
 
-
-
-
-
 // 18. Maximum Subarray
 /*
 function maxSubArray(nums) {
@@ -450,10 +387,6 @@ function maxSubArray(nums) {
 const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 console.log(maxSubArray(arr));
 */
-
-
-
-
 
 // 19. Plus One
 /*
@@ -473,10 +406,6 @@ console.log(plusOne([1, 2, 3]));
 console.log(plusOne([9, 9, 9]));
 */
 
-
-
-
-
 // 20. Search Insert Position
 /*
 function searchInsert(nums, target) {
@@ -492,8 +421,21 @@ function searchInsert(nums, target) {
 console.log(searchInsert([1, 3, 5, 6], 5));
 */
 
-
-
-
-
 // 21. Longest Common Prefix
+function longestCommonPrefix(strs) {
+  if (!strs.length) return "";
+
+  let prefix = strs[0];
+
+  for (let i = 1; i < strs.length; i++) {
+    while (strs[i].indexOf(prefix) !== 0) {
+      prefix = prefix.slice(0, -1);
+      if (!prefix) return "";
+    }
+  }
+
+  return prefix;
+}
+
+const input = ["flower", "flow", "flight"];
+console.log(longestCommonPrefix(input)); // "fl"
