@@ -512,9 +512,30 @@ console.log(isIsomorphic("egg", "add"));
 */
 
 // 25. Reverse String
+/*
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
 
-console.log(reverseString('hello'));
+console.log(reverseString("hello"));
+*/
 
+// 26. Reverse Words in a String
+/*
+function reverseWord(str) {
+    return str.split(' ').reverse(). join(' ');
+}
+
+console.log(reverseWord("the sky is blue"));
+*/
+
+// 27. Check for Palindrome String
+function isPalindrome(str) {
+  const cleaned = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
+
+  const reversed = cleaned.split("").reverse().join("");
+
+  return cleaned === reversed;
+}
+
+console.log(isPalindrome("A man, a plan, a canal: Panama"));
