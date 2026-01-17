@@ -530,6 +530,7 @@ console.log(reverseWord("the sky is blue"));
 */
 
 // 27. Check for Palindrome String
+/*
 function isPalindrome(str) {
   const cleaned = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
@@ -539,3 +540,23 @@ function isPalindrome(str) {
 }
 
 console.log(isPalindrome("A man, a plan, a canal: Panama"));
+*/
+
+// 28. Group Anagrams
+function groupAnagrams(words) {
+    const groups = {}
+
+    for (let word of words) {
+        const key = word.split('').sort().join('');
+
+        if (!groups[key]) {
+            groups[key] = [];
+        }
+        groups[key].push(word);
+    }
+
+    return Object.values(groups);
+}
+
+result = groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
+console.log(result);
