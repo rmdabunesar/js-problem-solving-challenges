@@ -481,34 +481,40 @@ function strStr(haystack, needle) {
 console.log(strStr("hello", "ll"));
 */
 
-
-
-
-
 // 24. Isomorphic Strings
+/*
 function isIsomorphic(s, t) {
-    if (s.length !== t.length) return false;
+  if (s.length !== t.length) return false;
 
-    const mapST = {};
-    const mapTS = {};
+  const mapST = {};
+  const mapTS = {};
 
-    for (let i = 0; i < s.length; i++) {
-        const charS = s[i];
-        const charT = t[i];
+  for (let i = 0; i < s.length; i++) {
+    const charS = s[i];
+    const charT = t[i];
 
-        if (mapST[charS] && mapST[charS] !== charT) {
-        return false;
-        }
-
-        if (mapTS[charT] && mapTS[charT] !== charS) {
-        return false;
-        }
-
-        mapST[charS] = charT;
-        mapTS[charT] = charS;
-
-        return true;
+    if (mapST[charS] && mapST[charS] !== charT) {
+      return false;
     }
+
+    if (mapTS[charT] && mapTS[charT] !== charS) {
+      return false;
+    }
+
+    mapST[charS] = charT;
+    mapTS[charT] = charS;
+
+    return true;
+  }
 }
 
 console.log(isIsomorphic("egg", "add"));
+*/
+
+// 25. Reverse String
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString('hello'));
+
