@@ -543,6 +543,7 @@ console.log(isPalindrome("A man, a plan, a canal: Panama"));
 */
 
 // 28. Group Anagrams
+/*
 function groupAnagrams(words) {
     const groups = {}
 
@@ -560,3 +561,54 @@ function groupAnagrams(words) {
 
 result = groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
 console.log(result);
+*/
+
+// 29. Longest Palindromic Substring
+/*
+function longestPalindrome(s) {
+    if (s.length < 2) return s;
+
+    let start = 0;
+    let maxLength = 1;
+
+    function expand(left, right) {
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            if (right - left + 1 > maxLength) {
+                start = left;
+                maxLength = right - left + 1;
+            }
+            left--;
+            right++;
+        }
+    }
+
+    for (let i = 0; i < s.length; i++) {
+       expand(i, i);
+        
+       expand(i, i+1);
+    }
+
+    return s.substring(start, start + maxLength);
+}
+
+console.log(longestPalindrome("babad"));
+*/
+
+// 30. First Unique Character in a String
+function firstUniqChar(s) {
+    const count = {};
+
+    for (let char of s) {
+        count[char] = (count[char] || 0) + 1;
+    }
+
+    for (let i = 0; i < s.length; i++) {
+        if (count[s[i]] === 1) {
+            return i;
+        }        
+    }
+
+    return -1;
+}
+
+console.log(firstUniqChar("leetcode"));
